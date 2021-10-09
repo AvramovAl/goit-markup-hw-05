@@ -510,16 +510,23 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  border: 1px solid var(--accent-color);
-}
-
 .clients-card {
   align-items: center;
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-link:hover .clients-card,
+.clients-link:focus .clients-card {
+  fill: var(--accent-color);
 }
 
 /* -----Футтер----- */
@@ -683,9 +690,7 @@ img {
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
